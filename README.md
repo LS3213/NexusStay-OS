@@ -578,4 +578,4 @@ PHP 版使用 SSE，不需要特殊配置。
 
 ## 许可证
 
-MIT License
+Apache-2.0 license
