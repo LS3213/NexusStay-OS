@@ -313,7 +313,7 @@ rm data/install.lock data/config.json
 **2. 创建数据库**
 
 宝塔 → 数据库 → MySQL → 添加数据库：
-- 数据库名：`nexusstay`
+- 数据库名：`自定义`
 - 用户名：自定义
 - 密码：自定义
 
@@ -330,15 +330,15 @@ rm data/install.lock data/config.json
 └── data/           ← 空目录
 ```
 
-**4. 配置 Nginx 重写**
+~~**4. 配置 Nginx 重写**~~（新版本已不需要）
 
-宝塔站点设置 → 配置文件，在 `server` 块中添加：
+~~宝塔站点设置 → 配置文件，在 `server` 块中添加：~~
 
-```nginx
-location /api/ {
-    rewrite ^/api/(.*)$ /api.php last;
-}
-```
+~~```nginx~~
+~~location /api/ {~~
+~~    rewrite ^/api/(.*)$ /api.php last;~~
+~~}~~
+~~```~~
 
 如果使用 Apache，`.htaccess` 文件已包含重写规则，无需额外配置。
 
@@ -349,6 +349,9 @@ location /api/ {
 1. 填写 MySQL 连接信息 → 测试连接
 2. 填写管理员用户名和密码 → 开始安装
 3. 安装成功 → 点击进入首页
+
+**后台页面**
+'http://你的域名/#/admin/'
 
 **6. 开启 HTTPS（可选）**
 
